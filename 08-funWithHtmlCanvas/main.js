@@ -1,25 +1,27 @@
-const canvas = document.getElementById('draw');
+const canvas = document.querySelector('#draw');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-ctx.strokeStyle = 'BADA55';
-// ctx.lineJoin = 'round';
+ctx.strokeStyle = '#BADA55';
+ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 ctx.lineWidth = 100;
 // ctx.globalCompositeOperation = 'xor'
 
 let isDrawing = false;
-let lastX;
-let lastY;
+let lastX = 0;
+let lastY = 0;
 let hue = 0
 let direction = true
 
 function draw(e) {
-  if (!isDrawing) return
+  if (!isDrawing) return; //stop the function from running when they are not moused down
   ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
-  ctx.lineWidth = 0;
+//   ctx.lineWidth = hue;
   ctx.beginPath();
+  //start from
   ctx.moveTo(lastX, lastY);
+  //go to
   ctx.lineTo(e.offsetX, e.offsetY);
   ctx.stroke();
   lastX = e.offsetX;
@@ -31,7 +33,11 @@ function draw(e) {
   if ( ctx.lineWidth >= 100 || ctx.lineWidth <= 1 ) {
     direction = !direction
   }
-  direction ? ctx.lineWidth++ : ctx.lineWidth--
+  if (direction) {
+    ctx.lineWidth++;
+  } else{
+    ctx.lineWidth--;
+  }
 }
 
 canvas.addEventListener('mousedown',(e) => {
