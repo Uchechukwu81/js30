@@ -1,5 +1,5 @@
 const pressed = [];
-const secretCode = 'wesbos';
+const secretCode = 'uchechi';
 
 window.addEventListener('keyup', (e) => {
   pressed.push(e.key);
