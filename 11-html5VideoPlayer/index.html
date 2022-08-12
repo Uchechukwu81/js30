@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom HTML5 Video Player</title>
+    <link rel="stylesheet" href="/11-html5VideoPlayer/style.css">
+</head>
+<body>
+    <h1>Custom HTML5 Video Player Demo</h1>
+	<div id='player'>
+		<video id='video-element'>
+			<source src='https://www.w3schools.com/html/mov_bbb.mp4' type='video/mp4'>
+			<source src='https://www.w3schools.com/html/mov_bbb.ogg' type='video/ogg'>
+		</video>
+		<div id='controls'>
+			<progress id='progress-bar' min='0' max='100' value='0'>0% played</progress>
+			<button id='btnReplay' class='replay' title='replay' accesskey="R" onclick='replayVideo();'>Replay</button>	
+			<button id='btnPlayPause' class='play' title='play' accesskey="P" onclick='playPauseVideo();'>Play</button>
+			<button id='btnStop' class='stop' title='stop' accesskey="X" onclick='stopVideo();'>Stop</button>
+            <input type="range" id="volume-bar" title="volume" min="0" max="1" step="0.1" value="1">
+			<button id='btnMute' class='mute' title='mute' onclick='muteVolume();'>Mute</button>	
+            <button id='btnFullScreen' class='fullscreen' title='toggle full screen' accesskey="T" onclick='toggleFullScreen();'>[&nbsp;&nbsp;]</button>
+		</div>
+	</div>	
+    <div style="clear:both"></div>
+    <p>Video courtesy of <a href="http://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+    <p>Volume bar styled using <a href="http://danielstern.ca/range.css/#/" target="_blank">range.css</a>. </p>
+
+    <hr />
+
+
+    <script src="/11-html5VideoPlayer/main.js"></script>
+</body>
+</html>
