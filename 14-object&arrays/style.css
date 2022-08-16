@@ -1,0 +1,11 @@
+body {  
+    padding: 1em;
+     background-image: linear-gradient(260deg,#337eb9,#384499);
+    color: #fff;
+    font-family: 'Roboto Mono', monospace; 
+  }
+  
+  p {
+    font-size: 2rem;
+    text-align: center;
+  }
