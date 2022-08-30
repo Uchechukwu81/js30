@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .wrapper {
+    border: 1px solid;
+    padding: 30px;
+    background: rgb(155, 59, 111);
+  }
+  h2 {
+    text-align: center;
+    padding: 30px;
+    color: white;
+  }
+  li {
+    color: white;
+  }
+  button {
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+    background: rgb(107, 71, 44);
+    
+  }
+  .plates {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: left;
+    list-style: none;
+    border: 1px solid;
+  }
+
+  input {
+    display: none;
+  }
+ 
+  input + label:before {
+    content: "⬜️";
+    margin-right: 10px;
+  }
+  
+  input:checked + label:before {
+    content: "✔";
+    margin-right: 10px;
+  }
+  
+
